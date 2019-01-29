@@ -1,0 +1,84 @@
+/**************************************
+FIXED LAYOUT CSS
+**************************************/
+
+.wrapper {
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+/**************************************
+CSS TO MAKE THE EXAMPLE LOOK PRETTY
+**************************************/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.one, .two, .three, .four, .five, .six, .seven {
+  background-color: #163A59;
+  color: #FF6600;
+  border: 2px solid;
+  box-sizing: border-box;
+  min-height: 100px;
+  min-width: 160px;
+  line-height: 100px;
+  
+}
+
+@media screen and (min-width: 600px) {
+  .one, .four, .seven {
+    width: 100%;
+  }
+
+  .two, .three, .five, .six {
+    width: 50%;
+    float: left;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper {
+    max-width: 900px;
+  }
+
+  .one {
+    width: 60%;
+    float: left;
+  }
+
+  .two, .five {
+    width: 40%;
+    float: left;
+  }
+
+  .three, .four{
+    width: 30%;
+    float: left;
+  }
+
+  .six, .seven {
+    width: 50%;
+    float: left;
+  }
+
+
+}
+ 
+
+/* 在小於 600px 的螢幕，元素會垂直堆疊並佔據整個容器的寬度。
+在寬度介於 600px~899px 的螢幕，元素 1、4 和 7 維持全寬，但元素 2、3、5 和 6 的寬度則是父容器的一半。
+在大於 900px 的螢幕，你的排版應該如上圖所示。此時父容器的寬度不應該超過 900px。元素 1 的寬為 60%，元素 3 和 4 是元素 1 寬度的一半，而元素 6 和 7 各是容器寬度的一半。 */
